@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 import '../styles/global.css';
 
 const pageTitle = 'Pagina de inicio';
@@ -13,10 +15,14 @@ const pageTitle = 'Pagina de inicio';
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
+    <Header />
 		
     <h1>{pageTitle}</h1>
+
+    <Footer />
+    
+    <script>
+      import '../scripts/menu.js';
+    </script>
   </body>
 </html>

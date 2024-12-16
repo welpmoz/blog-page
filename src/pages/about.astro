@@ -1,5 +1,7 @@
 ---
-import '../styles/global.css';
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import "../styles/global.css";
 
 const pageTitle = "Sobre mi";
 
@@ -35,7 +37,7 @@ const textCase = "uppercase";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
       h1 {
         color: purple;
         font-size: 4rem;
@@ -49,9 +51,7 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
+    <Header />
 
     <h1>{pageTitle}</h1>
     <h2>... !y mi nuevo sitio Astro!</h2>
@@ -95,4 +95,9 @@ const textCase = "uppercase";
       )
     }
   </body>
+
+  <Footer />
+  <script>
+    import "../scripts/menu.js";
+  </script>
 </html>
