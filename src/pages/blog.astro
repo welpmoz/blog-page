@@ -1,7 +1,5 @@
 ---
-import Footer from "../components/footer.astro";
-import Header from "../components/header.astro";
-import "../styles/global.css";
+import BaseLayout from "../layouts/base-layout.astro";
 
 const pageTitle = "Mi blog de Astro aprendizaje";
 ---
@@ -14,20 +12,14 @@ const pageTitle = "Mi blog de Astro aprendizaje";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <BaseLayout pageTitle={pageTitle}>
+      <p>Aqui es donde publicare sobre mi viaje de aprendizaje Astro.</p>
 
-    <h1>{pageTitle}</h1>
-    <p>Aqui es donde publicare sobre mi viaje de aprendizaje Astro.</p>
-
-    <ul>
-      <li><a href="/posts/post-1/">Publicacion 1</a></li>
-      <li><a href="/posts/post-2/">Publicación 2</a></li>
-      <li><a href="/posts/post-3/">Publicación 3</a></li>
-    </ul>
-
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+      <ul>
+        <li><a href="/posts/post-1/">Publicacion 1</a></li>
+        <li><a href="/posts/post-2/">Publicación 2</a></li>
+        <li><a href="/posts/post-3/">Publicación 3</a></li>
+      </ul>
+    </BaseLayout>
   </body>
 </html>
